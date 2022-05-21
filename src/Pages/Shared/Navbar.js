@@ -24,10 +24,10 @@ const Navbar = () => {
         <Link to="/reviews">Reviews</Link>
       </li>
       <li>
-        <Link to="/contactUs">Contact Us</Link>
+        <Link to="/myProfile">My Profile</Link>
       </li>
       <li>
-        <Link to="/about">About</Link>
+        <Link to="/blogs">Blogs</Link>
       </li>
       <li>
         {user && (
@@ -72,7 +72,7 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">Doctor Portal</a>
+        <a className="btn btn-ghost normal-case text-xl">MOTION</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
