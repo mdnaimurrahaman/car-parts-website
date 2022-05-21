@@ -66,23 +66,26 @@ const Login = () => {
 
   useEffect(() => {
     if (user) {
-      const url = "https://peaceful-beyond-14881.herokuapp.com/login";
-      fetch(url, {
-        method: "POST",
-        body: JSON.stringify({
-          title: "foo",
-          body: "bar",
-          email: user.email,
-        }),
-        headers: {
-          "content-type": "application/json",
-        },
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          localStorage.setItem("accessToken", data.accessToken);
-          navigate(from, { replace: true });
-        });
+      // const url = "https://peaceful-beyond-14881.herokuapp.com/login";
+      // fetch(url, {
+      //   method: "POST",
+      //   body: JSON.stringify({
+      //     title: "foo",
+      //     body: "bar",
+      //     email: user.email,
+      //   }),
+      //   headers: {
+      //     "content-type": "application/json",
+      //   },
+      // })
+      //   .then((response) => response.json())
+      //   .then((data) => {
+      //     localStorage.setItem("accessToken", data.accessToken);
+      //     navigate(from, { replace: true });
+      //   });
+
+      navigate(from, { replace: true });
+
     }
   }, [user]);
 

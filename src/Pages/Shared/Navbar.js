@@ -18,10 +18,10 @@ const Navbar = () => {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/appointment">Appointment</Link>
+        <Link to="/myOrder">My Order</Link>
       </li>
       <li>
-        <Link to="/reviews">Reviews</Link>
+        <Link to="/addReviews">Add Reviews</Link>
       </li>
       <li>
         <Link to="/myProfile">My Profile</Link>
@@ -35,10 +35,14 @@ const Navbar = () => {
             <Link to="/dashboard">Dashboard</Link>
           </li>
         )}
+      </li>
+      <li>
         {user ? (
-          <button onClick={logout} className="btn btn-ghost">
-            Sign Out
-          </button>
+          <li>
+            <button onClick={logout} className="btn btn-ghost">
+              Sign Out
+            </button>
+          </li>
         ) : (
           <Link to="/login">Login</Link>
         )}
