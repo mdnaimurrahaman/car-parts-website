@@ -1,0 +1,19 @@
+.top-banner{
+    display: flex;
+    align-items: center
+}
+.top-banner img{
+    width: 100%;
+}
+.top-banner h1{
+    color: #18212d;
+}
+
+@media only screen and (max-width: 600px) {
+    .top-banner{
+        flex-direction: column;
+    }
+    .banner-info{
+        padding: 20px;
+    }
+  }

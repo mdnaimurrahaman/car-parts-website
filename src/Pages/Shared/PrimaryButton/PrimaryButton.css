@@ -1,0 +1,25 @@
+
+.hero-btn {
+    width: 140px;
+    height: 45px;
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color:#f78c63;
+    border: none;
+    /* border-radius: 45px; */
+    box-shadow: 0px 8px 15px rgba(171, 118, 118, 0.275);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+  
+  .hero-btn:hover {
+    background-color: #f96226;
+    box-shadow: 0px 15px 20px rgba(229, 110, 46, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }

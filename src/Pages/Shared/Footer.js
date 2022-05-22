@@ -5,11 +5,12 @@ const Footer = () => {
     <div>
       <footer class="footer p-10 bg-base-200 text-base-content justify-around">
         <div>
-          <span class="footer-title">The Chassis</span>
-          <a class="link link-hover">The Engine.</a>
-          <a class="link link-hover">Transmission System.</a>
-          <a class="link link-hover">Body.</a>
-          <a class="link link-hover">Steering System</a>
+          <span class="footer-title">Spare Parts</span>
+          <a class="link link-hover">Tyres nd Wheels.</a>
+          <a class="link link-hover">Engine.</a>
+          <a class="link link-hover">Car Accessories.</a>
+          <a class="link link-hover">Car Glass</a>
+          <a class="link link-hover">Car Batteries</a>
         </div>
         <div>
           <span class="footer-title">Company</span>
