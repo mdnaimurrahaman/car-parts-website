@@ -13,10 +13,11 @@ import Home from './Pages/Home/Home';
 import MyOrder from './Pages/MyOrder/MyOrder';
 import MyProfile from './Pages/MyProfile/MyProfile';
 import Navbar from './Pages/Shared/Navbar';
+import Footer from './Pages/Shared/Footer';
 
 function App() {
   return (
-    <div >
+    <div className='max-w-7xl mx-auto'>
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -31,6 +32,7 @@ function App() {
           <Route path='reviews' element={<AddReviews/>}></Route>
         </Route>
       </Routes>
+      <Footer></Footer>
       <ToastContainer/>
     </div>
   );
