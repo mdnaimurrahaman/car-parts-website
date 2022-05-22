@@ -1,11 +1,15 @@
 import React from 'react';
+import Catagories from '../Catagories/Catagories';
 import TopBanner from './TopBanner/TopBanner';
 
 
 
 const Home = () => {
     return (
-        <TopBanner/>
+        <div>
+            <TopBanner/>
+            <Catagories/>
+        </div>
     );
 };
 
