@@ -8,6 +8,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Signup = () => {
     const [userInfo, setUserInfo] = useState({
+        name: "",
         email: "",
         password: "",
         confirmPass: "",
@@ -29,6 +30,9 @@ const Signup = () => {
       const [signInWithGoogle, googleUser, loading2, googleError]=useSignInWithGoogle(auth);
 
 
+    const handleNameChange = (e)=> {
+        setUserInfo({...userInfo, name: e.target.value})
+    }
     const handleEmailChange = (e)=> {
         const emailRegex = /\S+@\S+\.\S+/;
         const validEmail = emailRegex.test(e.target.value);
@@ -40,6 +44,7 @@ const Signup = () => {
             setUserInfo({...userInfo, email:""})
         }
     }
+
     const handlePasswordChange = (e)=>{
         const passwordRegex = /.{6,}/;
         const validPassword = passwordRegex.test(e.target.value);
@@ -108,11 +113,12 @@ const Signup = () => {
         <div className='login-container'>
             <div className='login-title'>SIGNUP</div>
             <form className='login-form' onSubmit={handleLogin}>
-                <input type="text" placeholder='Your Email' onChange={handleEmailChange} />
+                <input type="text" required placeholder='Your Name' onChange={handleNameChange} />
+                <input type="text" required placeholder='Your Email' onChange={handleEmailChange} />
                 {errors?.email && <p className='error-message'>{errors.email}</p>}
-                <input type="password" placeholder='password' onChange={handlePasswordChange}/>
+                <input type="password" required placeholder='password' onChange={handlePasswordChange}/>
                 {errors?.password && <p className='error-message'>{errors.password}</p>}
-                <input type="password" placeholder='confirm password' onChange={handleConfirmPasswordChange}/>
+                <input type="password" required placeholder='confirm password' onChange={handleConfirmPasswordChange}/>
                 <button>SignUp</button>
 
                 <p className='text-center mt-3'>Already have and account ? <Link to="/login" className='sign-link fw-bold pe-auto text-decoration-none'>SignIn</Link></p>

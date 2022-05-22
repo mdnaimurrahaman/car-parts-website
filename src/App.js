@@ -8,6 +8,7 @@ import Login from './Pages/Auth/Login/Login';
 import RequireAuth from './Pages/Auth/RequireAuth/RequireAuth';
 import Signup from './Pages/Auth/Signup/Signup';
 import Blogs from './Pages/Blogs/Blogs';
+import DashBoard from './Pages/DashBoard/DashBoard';
 import Home from './Pages/Home/Home';
 import MyOrder from './Pages/MyOrder/MyOrder';
 import MyProfile from './Pages/MyProfile/MyProfile';
@@ -25,6 +26,10 @@ function App() {
         <Route path='/signUp' element={<Signup/>}/>
         <Route path='/addReviews' element={<RequireAuth><AddReviews/></RequireAuth>}/>
         <Route path='/myOrder' element={<RequireAuth><MyOrder/></RequireAuth>}/>
+        <Route path='/dashboard' element={<RequireAuth><DashBoard/></RequireAuth>}>
+          <Route index element={<MyOrder/>}></Route>
+          <Route path='reviews' element={<AddReviews/>}></Route>
+        </Route>
       </Routes>
       <ToastContainer/>
     </div>
