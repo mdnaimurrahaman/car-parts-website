@@ -1,0 +1,8 @@
+.summary-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.review{
+    color: #f96226;
+}
