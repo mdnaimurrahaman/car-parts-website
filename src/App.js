@@ -14,6 +14,9 @@ import MyOrder from './Pages/MyOrder/MyOrder';
 import MyProfile from './Pages/MyProfile/MyProfile';
 import Navbar from './Pages/Shared/Navbar';
 import Footer from './Pages/Shared/Footer';
+import Users from './Pages/DashBoard/Users';
+import Purchase from './Pages/Home/Purchase/Purchase';
+
 
 function App() {
   return (
@@ -25,11 +28,13 @@ function App() {
         <Route path='/blogs' element={<Blogs/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/signUp' element={<Signup/>}/>
+        <Route path='/item/:id' element={<RequireAuth><Purchase></Purchase></RequireAuth>}></Route>
         <Route path='/addReviews' element={<RequireAuth><AddReviews/></RequireAuth>}/>
         <Route path='/myOrder' element={<RequireAuth><MyOrder/></RequireAuth>}/>
         <Route path='/dashboard' element={<RequireAuth><DashBoard/></RequireAuth>}>
           <Route index element={<MyOrder/>}></Route>
           <Route path='reviews' element={<AddReviews/>}></Route>
+          <Route path='users' element={<Users/>}></Route>
         </Route>
       </Routes>
       <Footer></Footer>

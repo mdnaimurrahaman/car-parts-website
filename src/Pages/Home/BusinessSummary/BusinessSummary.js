@@ -3,7 +3,7 @@ import './BusinessSummary.css'
 
 const BusinessSummary = () => {
   return (
-    <div className="summary-container">
+    <div className="summary-container mb-4">
         <div class="stats stats-vertical lg:stats-horizontal">
           <div class="stat">
             <div class="stat-figure review">
