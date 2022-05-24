@@ -9,7 +9,7 @@ import icon6 from '../../Images/Services icon/icon6.png'
 
 const Catagories = () => {
     return (
-        <div className='my-5'>
+        <div className=''>
             <h1 className='catagories-title text-center'>All Catagories</h1>
             <div className='catagories-container'>
                 <div className='catagories'>

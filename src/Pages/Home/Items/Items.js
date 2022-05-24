@@ -15,8 +15,8 @@ const Items = () => {
 
     return (
         <div>
-            <div className='container mb-5'>
-                <div className=' row items-section'>
+            <div className='container'>
+                <div className='items-section'>
                     {
                         items.map(item => <Item key={item._id} item={item}></Item>)
                     }

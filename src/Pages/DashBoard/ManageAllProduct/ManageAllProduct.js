@@ -11,7 +11,7 @@ const ManageAllProduct = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `localhost:5000/item/${id}`;
+      const url = `http://localhost:5000/item/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -36,12 +36,12 @@ const ManageAllProduct = () => {
             ></AllItems>
           ))}
         </div>
-        <div className="add-btn d-flex justify-content-center mt-4">
+        <div className="add-more">
           <Link
             className="text-white fw-bold pe-auto text-decoration-none"
             to="/dashboard/addProduct"
           >
-            <button className="text-center mt-3">Add Items</button>
+            <button className="text-center btn hero-btn mt-3">Add More</button>
           </Link>
         </div>
       </div>

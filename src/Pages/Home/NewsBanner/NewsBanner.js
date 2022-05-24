@@ -1,11 +1,12 @@
 import React from 'react';
 import banner from '../../../Images/Banner2.png'
 import PrimaryButton from '../../Shared/PrimaryButton/PrimaryButton';
+import './NewsBanner.css'
 
 const NewsBanner = () => {
     return (
         <div className="top-banner">
-        <div className="w-100 banner-info">
+        <div className=" banner-info">
           <div className="">
             <h1 class="text-4xl font-bold">Subscribe Our News..!</h1>
             <p class="py-2">

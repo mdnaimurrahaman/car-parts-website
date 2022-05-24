@@ -4,6 +4,16 @@
     height: 100px;
 }
 
+.product-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy-btn{
+    display: flex;
+    justify-content: center;
+}
+
 .item-cart{
     border-radius: 8px;
     border: 1px solid rgb(251, 240, 236);

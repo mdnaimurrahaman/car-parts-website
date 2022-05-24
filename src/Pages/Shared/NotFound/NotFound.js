@@ -1,6 +1,6 @@
 import React from 'react';
 import './NotFound.css'
-import notfound from '../../../images/404.png'
+import notfound from '../../../Images/404.png'
 
 const NotFound = () => {
     return (

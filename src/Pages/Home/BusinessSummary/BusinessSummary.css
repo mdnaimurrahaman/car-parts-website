@@ -1,7 +1,7 @@
 .summary-container{
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin: 40px 0px;
 }
 .review{
     color: #f96226;

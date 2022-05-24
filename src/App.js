@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
-import AddReviews from './Pages/AddReviews/AddReviews';
+import AddReviews from '../src/Pages/DashBoard/AddReviews/AddReviews';
 import Login from '../src/Pages/Auth/Login';
 import RequireAuth from '../src/Pages/Auth/RequireAuth';
 import Signup from '../src/Pages/Auth/SignUp';
@@ -20,6 +20,7 @@ import Purchase from './Pages/Home/Purchase/Purchase';
 import RequireAdmin from './Pages/Auth/RequireAdmin';
 import AddProduct from './Pages/DashBoard/AddProduct';
 import ManageAllProduct from './Pages/DashBoard/ManageAllProduct/ManageAllProduct';
+import NotFound from './Pages/Shared/NotFound/NotFound';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
           <Route path='addProduct' element={<RequireAdmin><AddProduct/></RequireAdmin>}></Route>
           <Route path='manageProduct' element={<RequireAdmin><ManageAllProduct/></RequireAdmin>}></Route>
         </Route>
+        <Route path='*' element={<NotFound/>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer/>

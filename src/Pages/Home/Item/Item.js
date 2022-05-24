@@ -10,7 +10,7 @@ const Item = ({ item }) => {
     navigate(`/item/${id}`)
   }
   return (
-    <div className="card-container g-3 col-sm-12 col-md-6 col-lg-3">
+    <div className="card-container">
 
 <div class="card item-cart bg-base-100 ">
   <figure class="px-10 pt-10">
@@ -21,12 +21,12 @@ const Item = ({ item }) => {
     <p><small>{description.slice(0,150)}</small></p>
           <div>
             <h5> Price : <span className="font-bold">{price}$</span></h5>
-            <div className="d-flex justify-content-between">
+            <div className="product-info">
               <p><small>Stock : <span className="text-orange-500 font-bold">{quantity}p</span></small></p>
               <p><small>Minimum Order : <span className="text-orange-500 font-bold"> {minOrder}p</span></small></p>
             </div>
           </div>
-    <div class="card-actions d-flex justify-content-center mt-3">
+    <div class="card-actions buy-btn mt-3">
       <button onClick={() => navigateToItemDetail(_id)} class="btn hero-btn">Buy Now</button>
     </div>
   </div>
