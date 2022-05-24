@@ -35,7 +35,7 @@ const AddProduct = () => {
 
     return (
         <div className="login-container">
-        <div className="login-title">Item Detail</div>
+        <div className="login-title">Product Detail</div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             placeholder="Product Name"

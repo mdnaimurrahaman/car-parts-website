@@ -55,9 +55,9 @@ const [token] = useToken(user || gUser)
 
   return (
     <div className="flex h-screen justify-center items-center">
-      <div className="card w-96 bg-base-100 shadow-xl">
-        <div className="card-body">
-          <h2 className="text-center text-2xl font-bold">Login</h2>
+      <div className="login-container">
+        <div className="">
+          <h2 className="login-title">Login</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
 
             <div className="form-control w-full max-w-xs">
@@ -109,7 +109,7 @@ const [token] = useToken(user || gUser)
               </label>
             </div>
             {signInError}
-            <input className="btn w-full max-w-xs" type="submit" value="Login" />
+            <input className="btn btn-ghost w-full max-w-xs" type="submit" value="Login" />
           </form>
           
           <p className=" text-center"><small>Forget password?<Link className="text-primary" to=""> Reset password</Link></small></p>

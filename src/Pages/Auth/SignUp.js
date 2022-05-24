@@ -51,9 +51,9 @@ const SignUp = () => {
   };
     return (
         <div className="flex h-screen justify-center items-center">
-      <div className="card w-96 bg-base-100 shadow-xl">
-        <div className="card-body">
-          <h2 className="text-center text-2xl font-bold">Sign Up</h2>
+      <div className="login-container">
+        <div className="">
+          <h2 className="login-title">Sign Up</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
 
             <div className="form-control w-full max-w-xs">
@@ -124,7 +124,7 @@ const SignUp = () => {
               </label>
             </div>
             {signInError}
-            <input className="btn w-full max-w-xs" type="submit" value="Sign Up" />
+            <input className="btn btn-ghost w-full max-w-xs" type="submit" value="Sign Up" />
           </form>
           <p><small>Already have an account? <Link className="text-primary" to="/login">Please LogIn</Link></small></p>
           <div className="divider">OR</div>

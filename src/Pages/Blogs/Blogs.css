@@ -1,0 +1,38 @@
+.Blogs-section div{
+    width: 100%;
+}
+.Blogs-section img{
+    border-radius: 15px;
+}
+
+.blog-title{
+    height: 120px;
+    /* background-color: rgba(251, 235, 226, 0.711);
+    border-radius: 15px; */
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(42, 43, 47, 0.91);
+}
+
+.blogs-container{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+.blog-detail{
+    padding: 30px;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .blogs-container{
+        flex-direction: column;
+        margin-bottom:0px;
+    }
+    .Blogs-section img{
+        padding: 20px;
+        border-radius:30px;
+    }
+  }
