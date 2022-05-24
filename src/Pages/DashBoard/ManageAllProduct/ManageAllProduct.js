@@ -1,17 +1,15 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
-import AllItems from '../AllItems/AllItems';
-import useItems from '../../Hooks/useItems';
-import './ManageAllProduct.css'
-
+import AllItems from "../AllItems/AllItems";
+import useItems from "../../Hooks/useItems";
+import "./ManageAllProduct.css";
 
 const ManageAllProduct = () => {
-
-    const [items, setItems] = useItems();
+  const [items, setItems] = useItems();
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `http://localhost:5000/item/${id}`;
+      const url = `https://dry-dawn-20973.herokuapp.com/item/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -24,8 +22,8 @@ const ManageAllProduct = () => {
     }
   };
 
-    return (
-        <div>
+  return (
+    <div>
       <div className="container">
         <div className="AllItems-section mt-5">
           {items.map((item) => (

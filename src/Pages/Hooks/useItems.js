@@ -4,7 +4,12 @@ const useItems = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/item")
+    fetch("https://dry-dawn-20973.herokuapp.com/item", {
+      method: "GET",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);

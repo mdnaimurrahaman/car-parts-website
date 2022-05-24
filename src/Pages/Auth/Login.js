@@ -32,6 +32,7 @@ const [token] = useToken(user || gUser)
   useEffect(()=>{
     if (token) {
       navigate(from, {replace: true});
+      toast.success('Login success')
     }
   },[token, navigate, from])
 

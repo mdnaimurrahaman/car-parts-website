@@ -2,6 +2,7 @@ import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
 const Navbar = () => {
@@ -10,6 +11,7 @@ const Navbar = () => {
   const logout = () => {
     signOut(auth);
     localStorage.removeItem("accessToken");
+    toast.error('Account Logout')
   };
 
   const menuItems = (

@@ -10,25 +10,28 @@ const Purchase = () => {
   const { id } = useParams();
   const [user] = useAuthState(auth);
   const [item, setItem] = useState({});
-  // const [order, setOrder] = useState(false);
+
+  // const [quantity, setQuantity] = useState(0);
+
   useEffect(() => {
-    const url = `http://localhost:5000/item/${id}`;
+    const url = `https://dry-dawn-20973.herokuapp.com/item/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setItem(data));
   }, [id, item]);
 
+  const { register, handleSubmit, watch } = useForm();
+  const orderQuantity = watch("order");
 
-  const { register, handleSubmit } = useForm();
   const onSubmit = (data, e) => {
     data.item = item;
     console.log(data);
-    const url = `http://localhost:5000/order`;
+    const url = `https://dry-dawn-20973.herokuapp.com/order`;
     fetch(url, {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        'authorization': `Bearer ${localStorage.getItem("accessToken")}`,
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
       body: JSON.stringify(data),
     })
@@ -122,7 +125,14 @@ const Purchase = () => {
                   />
                 </div>
                 <div className="">
-                  <button  type="submit" className="btn hero-btn">
+                  <button
+                    disabled={
+                      orderQuantity < item.minOrder ||
+                      orderQuantity > item.quantity
+                    }
+                    type="submit"
+                    className="btn hero-btn"
+                  >
                     Order Now
                   </button>
                 </div>

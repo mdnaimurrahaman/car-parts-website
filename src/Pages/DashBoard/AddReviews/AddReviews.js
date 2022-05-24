@@ -1,33 +1,33 @@
-import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-import auth from '../../../firebase.init';
+import auth from "../../../firebase.init";
 
 const AddReviews = () => {
-    
-    const [user] = useAuthState(auth);
-  
-    const { register, handleSubmit } = useForm();
-    const onSubmit = (data, e) => {
-    const url = `http://localhost:5000/review`;
+  const [user] = useAuthState(auth);
+
+  const { register, handleSubmit, watch } = useForm();
+  const review = watch("rating");
+  const onSubmit = (data, e) => {
+    const url = `https://dry-dawn-20973.herokuapp.com/review`;
     fetch(url, {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        'authorization': `Bearer ${localStorage.getItem("accessToken")}`,
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
       .then((result) => {
         e.target.reset();
-        toast('Your Review Added')
+        toast("Your Review Added");
       });
   };
 
-    return (
-        <div className="flex justify-center h-screen items-center">
+  return (
+    <div className="flex justify-center h-screen items-center">
       <div className="login-container">
         <div className="">
           <h2 className="login-title">Add Review</h2>
@@ -50,7 +50,7 @@ const AddReviews = () => {
               <input
                 type="number"
                 placeholder=" Rating here 1 to 5"
-                {...register("rating", { min:1,max:5, required: true })}
+                {...register("rating", { required: true })}
                 className="input input-bordered  w-full max-w-xs"
               />
             </div>
@@ -66,15 +66,19 @@ const AddReviews = () => {
               />
             </div>
             <div className="flex justify-center">
-
-            <button type="submit" className="btn btn-wide mt-3">Add</button>
+              <button
+                disabled={review > 5 || review < 1}
+                type="submit"
+                className="btn btn-wide mt-3"
+              >
+                Add
+              </button>
             </div>
           </form>
         </div>
       </div>
-      
     </div>
-    );
+  );
 };
 
 export default AddReviews;

@@ -15,7 +15,7 @@ const Review = ({ review }) => {
         <div className="card-actions justify-between items-center">
           <div className="avatar">
             <div className="w-16 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-              <img src="https://api.lorem.space/image/face?hash=3174" />
+              <img src="https://api.lorem.space/image/face?hash=3174" alt="" />
             </div>
           </div>
           <div className="rating-info">
