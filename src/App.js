@@ -2,6 +2,7 @@
 
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import AddReviews from './Pages/AddReviews/AddReviews';
 import Login from '../src/Pages/Auth/Login';
@@ -16,6 +17,8 @@ import Navbar from './Pages/Shared/Navbar';
 import Footer from './Pages/Shared/Footer';
 import Users from './Pages/DashBoard/Users';
 import Purchase from './Pages/Home/Purchase/Purchase';
+import RequireAdmin from './Pages/Auth/RequireAdmin';
+import AddProduct from './Pages/DashBoard/AddProduct';
 
 
 function App() {
@@ -34,7 +37,8 @@ function App() {
         <Route path='/dashboard' element={<RequireAuth><DashBoard/></RequireAuth>}>
           <Route index element={<MyOrder/>}></Route>
           <Route path='reviews' element={<AddReviews/>}></Route>
-          <Route path='users' element={<Users/>}></Route>
+          <Route path='users' element={<RequireAdmin><Users/></RequireAdmin>}></Route>
+          <Route path='addProduct' element={<RequireAdmin><AddProduct/></RequireAdmin>}></Route>
         </Route>
       </Routes>
       <Footer></Footer>

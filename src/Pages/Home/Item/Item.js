@@ -18,7 +18,7 @@ const Item = ({ item }) => {
   </figure>
   <div class="card-body">
     <h2 class="card-title">{name}</h2>
-    <p><small>{description}</small></p>
+    <p><small>{description.slice(0,150)}</small></p>
           <div>
             <h5> Price : <span className="font-bold">{price}$</span></h5>
             <div className="d-flex justify-content-between">
@@ -32,26 +32,6 @@ const Item = ({ item }) => {
   </div>
 </div>
 
-
-      {/* <div className="items-container card p-0">
-        <div className="card-top">
-          <img className="item-img" src={img} alt="" srcset="" />
-        </div>
-        <div className="card-body">
-          <h5 className="fw-bold">{name}</h5>
-          <p className="">{description}</p>
-          <div className="d-flex justify-content-between">
-            <h5 className="fw-bold">{price}$</h5>
-            <p><small>Product Stock : {quantity}p</small></p>
-            <p><small>Minimum Order : {minOrder}</small></p>
-          </div>
-        </div>
-        <button
-          onClick={() => navigateToItemDetail(_id)}
-          className="btn-update text-decoration-none text-white">
-          Order Now
-        </button>
-      </div> */}
     </div>
   );
 };
