@@ -22,6 +22,7 @@ import AddProduct from './Pages/DashBoard/AddProduct';
 import ManageAllProduct from './Pages/DashBoard/ManageAllProduct/ManageAllProduct';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import About from './Pages/About/About';
+import Payment from './Pages/DashBoard/Payment';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
         <Route path='/dashboard' element={<RequireAuth><DashBoard/></RequireAuth>}>
           <Route index element={<MyOrder/>}></Route>
           <Route path='reviews' element={<AddReviews/>}></Route>
+          <Route path='payment/:id' element={<Payment/>}></Route>
           <Route path='users' element={<RequireAdmin><Users/></RequireAdmin>}></Route>
           <Route path='addProduct' element={<RequireAdmin><AddProduct/></RequireAdmin>}></Route>
           <Route path='manageProduct' element={<RequireAdmin><ManageAllProduct/></RequireAdmin>}></Route>

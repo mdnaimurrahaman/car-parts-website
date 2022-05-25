@@ -7,12 +7,12 @@ const AllItems = ({ item, handleDelete }) => {
   return (
     <div className="">
       <div className="card-container">
-        <div class="card item-cart bg-base-100 ">
-          <figure class="px-10 pt-10">
-            <img src={img} alt="Shoes" class="rounded-xl" />
+        <div className="card item-cart bg-base-100 ">
+          <figure className="px-10 pt-10">
+            <img src={img} alt="Shoes" className="rounded-xl" />
           </figure>
-          <div class="card-body">
-            <h2 class="card-title">{name}</h2>
+          <div className="card-body">
+            <h2 className="card-title">{name}</h2>
             {/* <p><small>{description.slice(0,150)}</small></p> */}
             <div>
               <h5>
@@ -39,7 +39,7 @@ const AllItems = ({ item, handleDelete }) => {
                 </p>
               </div>
             </div>
-            <div class="card-actions buy-btn mt-3">
+            <div className="card-actions buy-btn mt-3">
               <button
                 className="btn hero-btn"
                 onClick={() => handleDelete(_id)}
