@@ -62,6 +62,7 @@ const MyOrder = () => {
               <th>Price</th>
               <th>Payment</th>
               <th>Order</th>
+              <th>Transition Id</th>
             </tr>
           </thead>
           <tbody>
@@ -88,7 +89,7 @@ const MyOrder = () => {
                   )}
                 </td>
                 <td>
-                  {o.item.price && !o.paid && (
+                  {o?.paid? <button className="btn-xs text-green-500 font-bold">Pending</button>:(
                     <label
                       onClick={() => setDeletingOrder(o)}
                       for="delete-confirm-modal"
@@ -99,6 +100,11 @@ const MyOrder = () => {
                     </label>
                   )}
                   {/* for="delete-confirm-modal" class="btn modal-button" */}
+                </td>
+                <td>
+                  {
+                    o?.paid && <button className="btn-xs text-orange-500 font-bold">{o.transactionId}</button>
+                  }
                 </td>
               </tr>
             ))}

@@ -11,7 +11,7 @@ import TopBanner from './TopBanner/TopBanner';
 
 const Home = () => {
     return (
-        <div>
+        <div className='px-6'>
             <TopBanner/>
             <Catagories/>
             <Items/>

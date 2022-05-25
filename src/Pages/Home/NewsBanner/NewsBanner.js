@@ -1,4 +1,5 @@
 import React from "react";
+import Typewriter from "typewriter-effect";
 import banner from "../../../Images/Banner2.png";
 import PrimaryButton from "../../Shared/PrimaryButton/PrimaryButton";
 import "./NewsBanner.css";
@@ -8,7 +9,13 @@ const NewsBanner = () => {
     <div className="top-banner">
       <div className=" banner-info">
         <div className="">
-          <h1 className="text-4xl font-bold">Subscribe Our News..!</h1>
+          <h1 className="text-4xl font-bold"><Typewriter
+                options={{
+                  strings: ["Subscribe Our News..!"],
+                  autoStart: true,
+                  loop: true,
+                }}
+              /></h1>
           <p className="py-2">Good Deals and Quality Parts Every Day.</p>
           <div>
             <div className="d-flex">

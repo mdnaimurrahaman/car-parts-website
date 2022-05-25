@@ -6,20 +6,27 @@ import Loading from "../Shared/Loading";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useToken from "../Hooks/useToken";
 import { toast } from "react-toastify";
+import { sendPasswordResetEmail } from "firebase/auth";
 
 const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+  const [sendPasswordResetEmail, sending,] = useSendPasswordResetEmail(
+    auth
+  );
   const {
     register,
     formState: { errors },
     handleSubmit,
+    watch
   } = useForm();
+  const email = watch("email");
   const [
     signInWithEmailAndPassword,
     user,
     loading,
     error,
   ] = useSignInWithEmailAndPassword(auth);
+  
 
 
 // jwt token hooks
@@ -113,7 +120,10 @@ const [token] = useToken(user || gUser)
             <input className="btn btn-ghost w-full max-w-xs" type="submit" value="Login" />
           </form>
           
-          <p className=" text-center"><small>Forget password?<Link className="text-primary" to=""> Reset password</Link></small></p>
+          <p className=" text-center"><small>Forget password?<Link onClick={async () => {
+          await sendPasswordResetEmail(email);
+          toast('Sent email');
+        }} className="text-primary" to=""> Reset password</Link></small></p>
           
           <div className="divider">OR</div>
           <button onClick={() => signInWithGoogle()} className="btn btn-outline">

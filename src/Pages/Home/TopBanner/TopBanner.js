@@ -1,5 +1,6 @@
 import React from "react";
 import "./TopBanner.css";
+import Typewriter from "typewriter-effect";
 import banner from "../../../Images/Top-Banner.png";
 import PrimaryButton from "../../Shared/PrimaryButton/PrimaryButton";
 
@@ -9,7 +10,14 @@ const TopBanner = () => {
       <div className="w-100 banner-info">
         <div className="">
           <h1 className="text-4xl font-bold">
-            Motion The Best Auto Parts Provider
+            
+            <Typewriter
+                options={{
+                  strings: ["Motion The Best Auto Parts Provider."],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
           </h1>
           <p className="py-4">
             Your Trusted Source for Automotive Parts And Accessories

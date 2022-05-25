@@ -85,6 +85,7 @@ const CheckoutForm = ({ order, total }) => {
       fetch(`https://dry-dawn-20973.herokuapp.com/order/${_id}`, {
         method: "PATCH",
         headers: {
+          "content-type": "application/json",
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
         body: JSON.stringify(payment),
@@ -116,11 +117,11 @@ const CheckoutForm = ({ order, total }) => {
           }}
         />
         <button
-          className="btn btn-success btn-xs mt-4"
+          className="button  w-full text-white h-10 btn-xs mt-5"
           type="submit"
           disabled={!stripe || !clientSecret}
         >
-          Pay
+          Pay ${total}
         </button>
       </form>
       {cardError && <p className="text-red-500">{cardError}</p>}

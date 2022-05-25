@@ -1,26 +1,7 @@
 import React from "react";
 
 const DeleteConfirmModal = ({ deletingOrder, handleDelete }) => {
-  console.log(deletingOrder._id);
-
-  // const handleDelete = id => {
-  //     fetch(`https://dry-dawn-20973.herokuapp.com/order/${id}`,{
-  //       method: 'DELETE',
-  //       headers: {
-  //         'authorization': `Bearer ${localStorage.getItem("accessToken")}`,
-  //       },
-  //     })
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       if(data.deletedCount){
-  //         toast.success(`Your Order is deleted`)
-  //         setDeletingOrder(null)
-  //       }
-  //     })
-  //   }
-
-  //   const remaining = items.filter((item) => item._id !== id);
-  //       setItems(remaining);
+  
 
   return (
     <div>

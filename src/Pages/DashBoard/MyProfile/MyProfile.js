@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import './MyProfile.css'
 import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
 
@@ -23,7 +24,7 @@ const MyProfile = () => {
   }, [user?.email]);
 
   return (
-    <div className="flex justify-center">
+    <div className="flex md:felx flex-wrap justify-center">
       <div className="w-60 flex justify-center mr-5">
         <div>
           <div class="avatar online">
