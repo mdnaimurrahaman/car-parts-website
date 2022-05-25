@@ -20,8 +20,43 @@
       justify-content: space-between;
   }
 
+  .order-detail{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 20px;
+  }
+
+.order-detail label,
+.order-detail input,
+.order-detail textarea,
+.order-detail button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.order-detail input::placeholder {
+    color: rgb(122, 113, 113);
+}
+
+.order-detail input,
+.order-detail textarea
+{
+    background: #f3eeece4;
+    padding: 10px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
   @media only screen and (max-width: 600px) {
     .product-detail{
         flex-direction: column;
+    }
+    .order-detail{
+        grid-template-columns: 1fr;
     }
   }
