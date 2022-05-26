@@ -10,6 +10,7 @@ const Purchase = () => {
   const { id } = useParams();
   const [user] = useAuthState(auth);
   const [item, setItem] = useState({});
+  // const [order, setOrder] = useState(false);
   useEffect(() => {
     const url = `http://localhost:5000/item/${id}`;
     fetch(url)
@@ -121,7 +122,7 @@ const Purchase = () => {
                   />
                 </div>
                 <div className="">
-                  <button type="submit" className="btn hero-btn">
+                  <button  type="submit" className="btn hero-btn">
                     Order Now
                   </button>
                 </div>

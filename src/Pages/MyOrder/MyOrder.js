@@ -44,7 +44,7 @@ const MyOrder = () => {
           </thead>
           <tbody>
             {order.map((o, index) => (
-              <tr>
+              <tr key={o._id}>
                 <th>{index + 1}</th>
                 <td>
                   <img width={40} src={o.item.img} alt="" />
@@ -53,16 +53,14 @@ const MyOrder = () => {
                 <td>{o?.item?.price}</td>
                 <td>
                   {
-                    (o.item.price && !o.item.paid) && <Link to={`/dashboard/payment/${o._id}`}><button className="btn btn-xs btn-success text-white">Pay</button></Link>
+                    (o.item.price && !o.paid) && <Link to={`/dashboard/payment/${o._id}`}><button className="btn btn-xs btn-success text-white">Pay</button></Link>
                   }
                   {
-                    (o.item.price && o.item.paid) && <button className="btn btn-xs btn-success text-white">Paid</button>
+                    (o.item.price && o.paid) && <button className="btn-xs text-green-500 font-bold">PAID</button>
                   }
                 </td>
                 <td>
-                  <button className="btn btn-xs btn-error text-white">
-                    Cancel
-                  </button>
+                  {(o.item.price && !o.paid) && <button className="btn btn-xs btn-error text-white"> Cancel</button>}
                 </td>
               </tr>
             ))}
