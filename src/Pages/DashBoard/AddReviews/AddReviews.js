@@ -50,7 +50,7 @@ const AddReviews = () => {
               <input
                 type="number"
                 placeholder=" Rating here 1 to 5"
-                {...register("rating", { min:0,max:5, required: true })}
+                {...register("rating", { min:1,max:5, required: true })}
                 className="input input-bordered  w-full max-w-xs"
               />
             </div>
