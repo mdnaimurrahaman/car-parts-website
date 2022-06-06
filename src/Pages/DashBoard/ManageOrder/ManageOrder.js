@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 
 const ManageOrder = () => {
   const [allOrder, setAllOrder] = useState([]);
+  // console.log(allOrder.length)
+  
 
   useEffect(() => {
     fetch(`https://dry-dawn-20973.herokuapp.com/allOrder`, {
@@ -13,6 +15,23 @@ const ManageOrder = () => {
       .then((res) => res.json())
       .then((data) => setAllOrder(data));
   }, []);
+
+  // const shipping = true;
+
+  // const handleShipping = (id) =>{
+  //   fetch(`https://dry-dawn-20973.herokuapp.com/order/${id}`, {
+  //       method: "PATCH",
+  //       headers: {
+  //         "content-type": "application/json",
+  //         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+  //       },
+  //       body: JSON.stringify({shipping}),
+  //     })
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         console.log(data);
+  //       });
+  // }
 
   return (
     <div>
@@ -52,6 +71,7 @@ const ManageOrder = () => {
                 <td>
                   {o?.item?.price && o.paid && (
                     <label
+                    //  onClick={()=>handleShipping(o._id)}
                       for="delete-confirm-modal"
                       className="btn btn-xs btn-success modal-button text-white"
                     >

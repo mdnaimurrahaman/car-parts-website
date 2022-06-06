@@ -25,6 +25,7 @@ import About from './Pages/About/About';
 import Payment from './Pages/DashBoard/Payment';
 import UpdateProfile from './Pages/DashBoard/MyProfile/UpdateProfile';
 import ManageOrder from './Pages/DashBoard/ManageOrder/ManageOrder';
+import DashboardBanner from './Pages/DashBoard/DashboardBanner/DashboardBanner';
 
 
 function App() {
@@ -42,7 +43,8 @@ function App() {
         <Route path='/updateProfile' element={<RequireAuth><UpdateProfile/></RequireAuth>}/>
         <Route path='/myProtfolio' element={<About/>}/>
         <Route path='/dashboard' element={<RequireAuth><DashBoard/></RequireAuth>}>
-          <Route index element={<MyProfile/>}></Route>
+          <Route index element={<DashboardBanner/>}></Route>
+          <Route path='myProfile' element={<MyProfile/>}></Route>
           <Route path='reviews' element={<AddReviews/>}></Route>
           <Route path='myOrder' element={<MyOrder/>}></Route>
           <Route path='payment/:id' element={<Payment/>}></Route>
