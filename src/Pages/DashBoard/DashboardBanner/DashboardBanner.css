@@ -1,9 +1,13 @@
 .dashboard-container{
-    background-color: rgba(145, 143, 141, 0.044);
+    /* background-color: rgba(145, 143, 141, 0.044); */
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
 }
-.dashboard-container{
+/* .dashboard-container{
     display: flex;
-}
+} */
 
 .service-add{
     display: flex;
@@ -14,9 +18,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5px;
 }
 .service-1 img{
-    width: 120px;
+    width: 110px;
 }
 .progress-info{
     padding: 20px;
@@ -26,7 +31,7 @@
     height: 622px;
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    
 }
 .dashboard-banner{
     display: flex;
@@ -39,10 +44,50 @@
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 10px;
+    padding: 10px;
 }
 .progress-detail{
  display: flex;
  flex-direction: column;
  align-items: center;
- justify-content: center
+ justify-content: center;
+ padding: 10px;
+ box-shadow: rgba(245, 210, 197, 0.573) 0px 3px 5px;
+ 
 }
+
+.service{
+   background: white; 
+   box-shadow: rgba(245, 210, 197, 0.573) 0px 3px 5px;
+   padding: 15px;
+}
+
+.add-item{
+    display: flex;
+    gap: 10px;
+    border: 1.5px solid rgb(247, 175, 159);
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+.badge{
+    background: rgb(255, 136, 81);
+    border: none;
+    color: white;
+}
+.progress h2{
+    font-weight: 800;
+    color: rgb(246, 135, 101);
+}
+.progress p{
+    font-size: 13px;
+}
+
+@media only screen and (max-width: 600px) {
+    .dashboard-container{
+        grid-template-columns: 1fr;
+    }
+    .progress{
+        grid-template-columns: repeat(3,1fr);
+    }
+  }

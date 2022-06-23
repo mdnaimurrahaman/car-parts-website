@@ -7,7 +7,7 @@ const DashboardBanner = () => {
     return (
         <div className='dashboard-container'>
             <div className='service-add'>
-                <div>
+                <div className='service'>
                     <h2 className='text-xl font-semibold'>Service</h2>
                     <div className='service-1'>
                         <img src={progress} alt="" srcset="" />
@@ -17,12 +17,12 @@ const DashboardBanner = () => {
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div>
+                <div className='service'>
+                    <div className='flex justify-between align-center mb-5'>
                     <h2 className='text-xl font-semibold'>Add-ons</h2>
                     <div class="badge">+99</div>
                     </div>
-                    <div>
+                    <div className='add-item'>
                     <div class="avatar">
                     <div class="w-8 rounded">
                         <img src="https://api.lorem.space/image/face?hash=33791" alt="Tailwind-CSS-Avatar-component" />
@@ -30,7 +30,7 @@ const DashboardBanner = () => {
                     </div>
                     <p className='text-xl'>ECU Tester</p>
                     </div>
-                    <div>
+                    <div className=' add-item'>
                     <div class="avatar">
                     <div class="w-8 rounded">
                         <img src="https://api.lorem.space/image/face?hash=33791" alt="Tailwind-CSS-Avatar-component" />
@@ -40,12 +40,12 @@ const DashboardBanner = () => {
                     </div>
                     <p className='text-center'>More</p>
                 </div>
-                <div>
+                <div className='service'>
                     <h2 className='text-xl font-semibold text-gray-300'>Insurance</h2>
-                    <div>
-                        <h2 className='text-xl font-bold'>Insurance Expired</h2>
-                        <div>
-                            <button className='btn hero-btn'>Buy Now</button>
+                    <div className='p-10'>
+                        <h2 className='text-xl font-bold text-center'>Insurance Expired</h2>
+                        <div className='flex justify-center'>
+                            <button className='btn hero-btn mt-3'>Buy Now</button>
                         </div>
                     </div>
                 </div>
