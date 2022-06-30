@@ -79,6 +79,9 @@ dedication.</p>
 [linkedin]: https://www.linkedin.com/in/mdnaimurrahaman 'LinkedIn'
 [github]: https://github.com/mdnaimurrahaman 'Github'
 [fiverr]: https://www.fiverr.com/mdnaimur_202 'Fiverr'
-[link]:  https://github.com/mdnaimurrahaman
-[link]:  https://github.com/mdnaimurrahaman
-[link]:  https://github.com/mdnaimurrahaman
+[facebook]: https://web.facebook.com/emon2075 'Facebook'
+[dribbble]: https://dribbble.com/impressdesignry 'Dribbble'
+[linkedin]: https://www.linkedin.com/in/mdnaimurrahaman 'LinkedIn'
+[github]: https://github.com/mdnaimurrahaman 'Github'
+[fiverr]: https://www.fiverr.com/mdnaimur_202 'Fiverr'
+
