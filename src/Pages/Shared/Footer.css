@@ -1,0 +1,13 @@
+.footer-container{
+    background-image: url("https://i.ibb.co/BtqcJxw/footer-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer a{
+    color: rgb(182, 179, 179);
+}
+
+footer span{
+    color: rgb(255, 53, 2);
+}

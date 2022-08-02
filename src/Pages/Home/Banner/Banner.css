@@ -1,0 +1,105 @@
+.banner{
+    background-image: url("https://i.ibb.co/885Bgnc/240-F-301421844-AMi-USf-So7an6-M4gaqpdh1-Ljl-K8j-Lae9a.jpg");
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: top 70px center;
+    background-attachment: fixed;
+    display: flex;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+}
+
+.banner h4{
+    color: var(--color-light);
+}
+
+.main__btn {
+    min-width: 300px;
+    min-height: 60px;
+    /* font-family: 'Nunito', sans-serif; */
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 600;
+    color: #ffffff;
+    /* background: #4FD1C5; */
+    background: #F54B64;
+  background: linear-gradient(90deg, rgb(246, 155, 133) 0%, rgb(224, 73, 73) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(209, 96, 79, 0.392);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    }
+  
+.main__btn::before {
+  content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 2px solid #F54B64;
+    box-shadow: 0 0 60px rgba(255, 51, 0, 0.26);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .main__btn:hover, .button:focus {
+    color: #fdfdfd;
+    transform: translateY(-6px);
+  }
+  
+  .main__btn:hover::before, .main__btn:focus::before {
+    opacity: 1;
+  }
+
+
+  
+  .main__btn::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 2px solid #F54B64;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+
+  .banner h4 {
+    color: #b1afae;
+  }
+
+  .banner h1{
+    font-size: 35px;
+  }
+  
+  /* .main__btn:hover::after, .main__btn:focus::after {
+    animation: none;
+    display: none;
+  } */
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }

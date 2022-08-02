@@ -6,6 +6,7 @@ import Items from './Items/Items';
 import NewsBanner from './NewsBanner/NewsBanner';
 import Reviews from './Reviews/Reviews';
 import TopBanner from './TopBanner/TopBanner';
+import Banner from './Banner/Banner'
 
 
 
@@ -16,6 +17,7 @@ const Home = () => {
             <Catagories/>
             <Brand/>
             <Items/>
+            <Banner/>
             <Reviews/>
             <NewsBanner/>
             <BusinessSummary/>
