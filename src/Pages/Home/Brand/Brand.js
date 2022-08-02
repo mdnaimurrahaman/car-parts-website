@@ -15,6 +15,8 @@ import logo12 from '../../../Images/Car logo/logo12.png'
 import car4 from '../../../Images/car images/car4.png'
 import car1 from '../../../Images/car images/car1.png'
 import car3 from '../../../Images/car images/car3.png'
+import car2 from '../../../Images/car images/car2.png'
+
 
 
 const Brand = () => {
@@ -66,7 +68,7 @@ const Brand = () => {
                             <img src={car4} alt="" srcset="" />
                         </div>
                         <div className='car-detail'>
-                            <h1 className='text-xl font-bold'>Mini Cooper s 5 door 2019 long-term review</h1>
+                            <h2 className=''>Mini Cooper s 5 door 2019 long-term review</h2>
                             <p>Rent your dream car in Dubai. We currently have a discount on all cars. Sports & Luxury. Our Luxury Rental Cars Are New and Maintained to Make You Enjoy Your Driving Experience.</p>
                         </div>
                     </div>
@@ -75,7 +77,7 @@ const Brand = () => {
                             <img src={car1} alt="" srcset="" />
                         </div>
                         <div className='car-detail'>
-                            <h1 className='text-xl font-bold'>Mini Cooper s 5 door 2019 long-term review</h1>
+                            <h2 className=''>Mini Cooper s 5 door 2019 long-term review</h2>
                             <p>Rent your dream car in Dubai. We currently have a discount on all cars. Sports & Luxury. Our Luxury Rental Cars Are New and Maintained to Make You Enjoy Your Driving Experience.</p>
                         </div>
                     </div>
@@ -84,10 +86,11 @@ const Brand = () => {
                             <img src={car3} alt="" srcset="" />
                         </div>
                         <div className='car-detail'>
-                            <h1 className='text-xl font-bold'>Mini Cooper s 5 door 2019 long-term review</h1>
+                            <h2 className=''>Mini Cooper s 5 door 2019 long-term review</h2>
                             <p>Rent your dream car in Dubai. We currently have a discount on all cars. Sports & Luxury. Our Luxury Rental Cars Are New and Maintained to Make You Enjoy Your Driving Experience.</p>
                         </div>
                     </div>
+                   
                 </div>
             </div>
        </div>

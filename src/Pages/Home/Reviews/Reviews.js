@@ -19,6 +19,10 @@ const Reviews = () => {
   return (
     <div>
       <div className="my-5">
+      <div>
+            <h2 className='catagories-title'>Customer Review</h2>
+            <p className='text-center uppercase '>Valuable feedback from our customers</p>
+        </div>
         <div className="reviews-container">
           {reviews.slice(0, 8).map((review) => (
             <Review key={review._id} review={review}></Review>

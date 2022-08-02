@@ -31,6 +31,14 @@
     transform: translateY(-1px);
   }
 
+  .review-cart h2{
+        font-size: 18px;
+  }
+  .review-cart p{
+        font-size: 13px;
+        text-align: justify;
+  }
+
   @media only screen and (max-width: 600px) {
     .reviews-container{
         grid-template-columns: 1fr;

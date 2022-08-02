@@ -1,11 +1,19 @@
+.catagories-section hr {
+    width: 100px;
+    margin-bottom: 50px;
+    border: 1px solid #f68051;
+}
+.hr-line{
+    display: flex;
+    justify-content: center;
+}
 .catagories-title{
     font-family: 'Roboto', sans-serif;
     color: #18212d;
+    text-align: center;
     font-size: 22px;
-    text-transform: uppercase;
     /* letter-spacing: 1px; */
     font-weight: 600;
-    margin-bottom: 30px;
 }
 .catagories-container{
     display: grid;

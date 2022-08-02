@@ -9,8 +9,12 @@ import icon6 from '../../Images/Services icon/icon6.png'
 
 const Catagories = () => {
     return (
-        <div className=''>
-            <h1 className='catagories-title text-center'>All Catagories</h1>
+        <section className='catagories-section'>
+            <h2 className='catagories-title'>All Catagories</h2>
+            <p className='text-center uppercase '>Our Catagories and Products</p>
+            <div className='hr-line line-1'>
+                <hr/>
+            </div>
             <div className='catagories-container'>
                 <div className='catagories'>
                     <img src={icon1} alt="" srcset="" />
@@ -37,7 +41,7 @@ const Catagories = () => {
                     <h3 className=''>Car Batteries</h3>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

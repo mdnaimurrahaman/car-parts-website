@@ -73,11 +73,6 @@ dedication.</p>
   <img src="https://activity-graph.herokuapp.com/graph?username=mdnaimurrahaman&theme=react-dark" />
  </a>
  <br/>
-## <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30px" height="30px"> **Activity Graph &#8595;**
- <a href="https://github.com/mdnaimurrahaman">
-  <img src="https://activity-graph.herokuapp.com/graph?username=mdnaimurrahaman&theme=react-dark" />
- </a>
- <br/>
 
 [facebook]: https://web.facebook.com/emon2075 'Facebook'
 [dribbble]: https://dribbble.com/impressdesignry 'Dribbble'
