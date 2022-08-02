@@ -7,6 +7,7 @@ import NewsBanner from './NewsBanner/NewsBanner';
 import Reviews from './Reviews/Reviews';
 import TopBanner from './TopBanner/TopBanner';
 import Banner from './Banner/Banner'
+import Contact from './Contact/Contact'
 
 
 
@@ -21,6 +22,7 @@ const Home = () => {
             <Reviews/>
             <NewsBanner/>
             <BusinessSummary/>
+            <Contact/>
         </div>
     );
 };

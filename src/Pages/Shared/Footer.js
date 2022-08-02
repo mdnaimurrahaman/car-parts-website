@@ -10,7 +10,7 @@ import './Footer.css'
 
 const Footer = () => {
   return (
-    <div className="footer-container">
+    <section className="footer-container">
       <footer className="footer p-10 text-base-content justify-around">
         <div>
           <span className="footer-title">MOTION</span>
@@ -40,9 +40,9 @@ const Footer = () => {
           <a className="link link-hover">Cookie policy</a>
         </div>
       </footer>
-      <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300 justify-around">
+      <footer className="footer px-10 py-4 border-t text-base-content border-base-300 justify-around">
         <div className="items-center grid-flow-col">
-          <p>&copy; Md Naimur Rahaman Emon. All rights reserved.</p>
+          <small><p className="text-white">&copy; Md Naimur Rahaman Emon. All rights reserved.</p></small>
         </div>
         <div className="md:place-self-center md:justify-self-end">
           <div className="grid grid-flow-col gap-4">
@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </div>
+    </section>
   );
 };
 
