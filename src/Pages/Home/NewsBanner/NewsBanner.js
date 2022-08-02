@@ -6,7 +6,7 @@ import "./NewsBanner.css";
 
 const NewsBanner = () => {
   return (
-    <div className="top-banner">
+    <section className="top-banner">
       <div className=" banner-info">
         <div className="">
           <h1 className="text-4xl font-bold"><Typewriter
@@ -35,7 +35,7 @@ const NewsBanner = () => {
       <div className="">
         <img src={banner} alt="" srcset="" />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -14,8 +14,8 @@ const Home = () => {
         <div className='px-6'>
             <TopBanner/>
             <Catagories/>
-            <Items/>
             <Brand/>
+            <Items/>
             <Reviews/>
             <NewsBanner/>
             <BusinessSummary/>

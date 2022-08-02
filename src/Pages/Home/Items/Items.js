@@ -14,15 +14,20 @@ const Items = () => {
     }
 
     return (
-        <div>
-            <div className='container'>
+        <section>
+             <h2 className='catagories-title'>Products</h2>
+            <p className='text-center uppercase '>Our regular products</p>
+            <div className='hr-line line-1'>
+                <hr/>
+            </div>
+            <div className='container mt-12'>
                 <div className='items-section'>
                     {
                         items.map(item => <Item key={item._id} item={item}></Item>)
                     }
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

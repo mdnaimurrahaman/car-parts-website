@@ -1,3 +1,28 @@
+section > h1{
+  font-size: 30px;
+  color: #3d3c3b;
+}
+.brand__header{
+  display: flex;
+  gap: 90px;
+}
+
+.brand__header h1{
+  font-size: 30px;
+}
+
+.brand-menu{
+  color: #0000005e;
+  display: flex;
+  gap: 8px;
+  border: 1px solid gray;
+  padding: 8px 15px;
+  border-radius: 25px;
+  /* width: 38%; */
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+}
 .auto-title{
      font-family: 'Roboto', sans-serif;
      font-size: 15px;
@@ -93,6 +118,10 @@
     .brand-logo{
         grid-template-columns: repeat(2,1fr);
         width: 100%;
+    }
+    .brand__header{
+      flex-direction: column;
+      gap: 20px;
     }
     .brand-container{
         flex-direction: column;

@@ -15,7 +15,7 @@ const Catagories = () => {
             <div className='hr-line line-1'>
                 <hr/>
             </div>
-            <div className='catagories-container'>
+            <div className='catagories-container mt-12'>
                 <div className='catagories'>
                     <img src={icon1} alt="" srcset="" />
                     <h3 className=''>Spare Parts</h3>
