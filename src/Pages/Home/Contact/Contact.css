@@ -47,10 +47,10 @@ input, textarea {
     width: 100%;
     padding: 1rem;
     border-radius: 0.5rem;
-    background: transparent;
-    border:2px solid rgb(243, 228, 227);
+    background-color: rgba(250, 178, 144, 0.062);
+    border:2px solid rgb(248, 237, 236);
     resize: none;
-    color: white;
+    color: rgb(41, 40, 40);
 }
 
 

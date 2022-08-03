@@ -1,9 +1,18 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, Outlet } from "react-router-dom";
+import { MdDashboardCustomize } from 'react-icons/md';
+import { FaUser } from 'react-icons/fa';
+import { FaUserEdit } from 'react-icons/fa';
+import { HiShoppingCart } from 'react-icons/hi';
+import { GiAchievement } from 'react-icons/gi';
+import { MdAddCircle } from 'react-icons/md';
+import { MdSettingsInputComponent } from 'react-icons/md';
+import { FaShoppingBasket } from 'react-icons/fa';
 import auth from "../../firebase.init";
 import useAdmin from "../Hooks/UseAdmin";
 import Loading from "../Shared/Loading";
+import './Dashboard.css'
 
 const DashBoard = () => {
   const [user] = useAuthState(auth);
@@ -20,21 +29,21 @@ const DashBoard = () => {
       </div>
       <div className="drawer-side">
         <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
-        <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+        <ul className="menu sidebox-drawer p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
 
           <li>
-            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/dashboard"><MdDashboardCustomize/>Dashboard</Link>
           </li>
           <li>
-            <Link to="/dashboard/myProfile">My Profile</Link>
+            <Link to="/dashboard/myProfile"><FaUser/>My Profile</Link>
           </li>
           {!admin && 
             <>
           <li>
-            <Link to="/dashboard/myOrder">My Order</Link>
+            <Link to="/dashboard/myOrder"><HiShoppingCart/> My Order</Link>
           </li>
           <li>
-            <Link to="/dashboard/reviews">Add Reviews</Link>
+            <Link to="/dashboard/reviews"><GiAchievement/> Add Reviews</Link>
           </li>
             </>
           }
@@ -43,16 +52,16 @@ const DashBoard = () => {
           {admin && (
             <>
               <li>
-                <Link to="/dashboard/users">Make Admin</Link>
+                <Link to="/dashboard/users"> <FaUserEdit/>Make Admin</Link>
               </li>
               <li>
-                <Link to="/dashboard/addProduct">Add Product</Link>
+                <Link to="/dashboard/addProduct"><MdAddCircle/>Add Product</Link>
               </li>
               <li>
-                <Link to="/dashboard/manageProduct">Manage All Product</Link>
+                <Link to="/dashboard/manageProduct"><MdSettingsInputComponent/> Manage All Product</Link>
               </li>
               <li>
-                <Link to="/dashboard/manageOrder">Manage All Orders</Link>
+                <Link to="/dashboard/manageOrder"><FaShoppingBasket/> Manage All Orders</Link>
               </li>
             </>
           )}
